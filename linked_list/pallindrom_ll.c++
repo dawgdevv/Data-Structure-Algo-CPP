@@ -36,6 +36,36 @@ Node *reverse(Node *head)
     head->next = NULL;
     return newhead;
 }
+bool isPalindrome(Node *head)
+{
+    if (head == nullptr || head->next == nullptr)
+        return true;
+
+    Node *slow = head;
+    Node *fast = head;
+    std::stack<int> stack;
+
+    while (fast != nullptr && fast->next != nullptr)
+    {
+        stack.push(slow->data);
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+
+    // If the linked list has odd number of nodes, skip the middle node
+    if (fast != nullptr)
+        slow = slow->next;
+
+    while (slow != nullptr)
+    {
+        if (slow->data != stack.top())
+            return false;
+        stack.pop();
+        slow = slow->next;
+    }
+
+    return true;
+}
 
 bool isPalindrome(Node *head)
 {
@@ -73,8 +103,34 @@ bool isPalindrome(Node *head)
 // Example usage
 int main()
 {
+
     // Create a sample linked list
-    Node *head = new Node(1, new Node(2, new Node(3, new Node(2, new Node(1)))));
+    int n;
+    std::cout << "Enter the number of elements: ";
+    std::cin >> n;
+
+    Node *head = nullptr;
+    Node *tail = nullptr;
+
+    for (int i = 0; i < n; i++)
+    {
+        int data;
+        std::cout << "Enter element " << i + 1 << ": ";
+        std::cin >> data;
+
+        Node *newNode = new Node(data);
+
+        if (head == nullptr)
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
 
     // Check if the linked list is a palindrome
     if (isPalindrome(head))
