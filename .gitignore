@@ -1,8 +1,5 @@
 #ignoring files
 **/*.exe
-/Graph
-/Matrix
-/String
-/Tree
+**/*.dll
 **/*.json
 **/*.txt
