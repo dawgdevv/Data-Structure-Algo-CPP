@@ -36,36 +36,6 @@ Node *reverse(Node *head)
     head->next = NULL;
     return newhead;
 }
-bool isPalindrome(Node *head)
-{
-    if (head == nullptr || head->next == nullptr)
-        return true;
-
-    Node *slow = head;
-    Node *fast = head;
-    std::stack<int> stack;
-
-    while (fast != nullptr && fast->next != nullptr)
-    {
-        stack.push(slow->data);
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-
-    // If the linked list has odd number of nodes, skip the middle node
-    if (fast != nullptr)
-        slow = slow->next;
-
-    while (slow != nullptr)
-    {
-        if (slow->data != stack.top())
-            return false;
-        stack.pop();
-        slow = slow->next;
-    }
-
-    return true;
-}
 
 bool isPalindrome(Node *head)
 {
