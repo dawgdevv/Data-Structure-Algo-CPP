@@ -22,3 +22,9 @@ public:
         prev = nullptr;
     }
 };
+node *pair_sum_dll(node *head, int sum)
+{
+}
+int main()
+{
+}
