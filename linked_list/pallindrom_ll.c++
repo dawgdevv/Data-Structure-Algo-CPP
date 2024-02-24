@@ -1,3 +1,13 @@
+/*Initialize a slow and a fast pointer at the head of the linked list.
+
+Move the slow pointer one step at a time and the fast pointer two steps at a time. This way, when the fast pointer reaches the end of the list, the slow pointer will be at the middle.
+
+Push the elements from the first half of the list (i.e., the elements that the slow pointer traverses) onto a stack.
+
+If the list has an odd number of elements, skip the middle element by moving the slow pointer one step forward.
+
+Continue moving the slow pointer one step at a time, now comparing the elements it traverses with the elements popped from the stack. If all elements match, the linked list is a palindrome.s*/
+
 #include <bits/stdc++.h>
 #include <iostream>
 

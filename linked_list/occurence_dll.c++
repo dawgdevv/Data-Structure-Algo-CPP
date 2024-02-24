@@ -1,3 +1,21 @@
+/*The function delete_dll takes two arguments: a pointer to the head of the list (head) and the key of the node to be deleted (key).
+
+It initializes a temporary pointer temp to head.
+
+It enters a while loop that continues until temp becomes NULL, which is the end of the linked list.
+
+Inside the loop, it checks if the data of the current node (temp) is equal to key.
+
+If the data is equal to key, it means this is the node to be deleted. The steps to delete the node would be:
+
+If temp is not the head of the list (i.e., temp->prev is not NULL), update the next pointer of the previous node to skip temp and point to temp->next.
+If temp is not the last node in the list (i.e., temp->next is not NULL), update the prev pointer of the next node to skip temp and point to temp->prev.
+If temp is the head of the list, update head to be the next node (temp->next).
+Delete temp.
+If the data is not equal to key, move temp one step forward by setting temp to temp->next.
+
+Once the loop finishes, return the (possibly updated) head of the list.*/
+
 #include <iostream>
 
 class node

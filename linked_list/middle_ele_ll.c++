@@ -1,3 +1,16 @@
+/*The function findMiddleNode takes a pointer to the head of the linked list as its argument.
+
+It checks if the head is nullptr. If it is, the list is empty, and the function returns nullptr.
+
+It initializes two pointers: slowPtr and fastPtr, both set to head.
+
+It enters a while loop that continues until fastPtr becomes nullptr or fastPtr->next becomes nullptr, which is the end of the linked list.
+
+Inside the loop:
+
+It moves slowPtr one step forward by setting slowPtr to slowPtr->next.
+It moves fastPtr two steps forward by setting fastPtr to fastPtr->next->next.
+Once the loop finishes (when fastPtr is nullptr or fastPtr->next is nullptr), slowPtr will be at the middle of the list, which is returned by the function.*/
 #include <iostream>
 
 class node

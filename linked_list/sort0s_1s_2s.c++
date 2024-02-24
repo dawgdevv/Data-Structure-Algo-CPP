@@ -1,3 +1,14 @@
+/*Create three dummy nodes: zeroHead, oneHead, and twoHead. These nodes act as the heads of three linked lists: one for nodes with data 0, one for nodes with data 1, and one for nodes with data 2.
+Traverse the original linked list. For each node:
+
+If the node's data is 0, append it to the end of the 0s list.
+If the node's data is 1, append it to the end of the 1s list.
+If the node's data is 2, append it to the end of the 2s list.
+
+After the original list is completely traversed, concatenate the 0s, 1s, and 2s lists together.
+
+Return the head of the concatenated list.*/
+
 #include <iostream>
 class Node
 {

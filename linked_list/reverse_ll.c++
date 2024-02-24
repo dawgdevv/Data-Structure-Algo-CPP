@@ -1,4 +1,11 @@
+/*Initialize three pointers: current (set to head), prev (set to nullptr), and next (not set initially).
 
+Traverse the linked list:
+
+For each node, first save the next node by setting next to current->next.
+Reverse the direction by setting current->next to prev.
+Move prev and current one step forward: set prev to current and current to next.
+Once current becomes nullptr, prev will be the new head of the reversed list.*/
 #include <iostream>
 #include <bits/stdc++.h>
 class Node
@@ -42,7 +49,6 @@ Node *reverseLinkedList(Node *head)
     return prev;
 }
 
-// Helper function to print the linked list
 void printLinkedList(Node *head)
 {
     Node *temp = head;
@@ -56,7 +62,7 @@ void printLinkedList(Node *head)
 
 int main()
 {
-    // Creating a sample linked list: 1 -> 2 -> 3 -> 4 -> 5
+
     Node *head = new Node(1);
     head->next = new Node(2);
     head->next->next = new Node(3);

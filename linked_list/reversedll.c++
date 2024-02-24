@@ -1,3 +1,12 @@
+/*Initialize three pointers: current (set to head), temp (set to nullptr), and prev (not shown in the provided code, but typically used in such algorithms).
+
+Traverse the linked list:
+
+For each node, first save the next node by setting temp to current->next.
+Reverse the direction by setting current->next to prev (not shown in the provided code).
+If the list is doubly linked, also set current->prev to temp.
+Move prev and current one step forward: set prev to current and current to temp.
+Once current becomes nullptr, prev will be the new head of the reversed list.*/
 #include <iostream>
 using namespace std;
 class node
