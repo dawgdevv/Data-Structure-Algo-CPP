@@ -4,3 +4,8 @@
 **/*.json
 **/*.txt
 **/*.idea
+**/*.sln
+Array/ss_sl_array
+linked_list/addtwo_no
+linked_list/del_ll
+Algorithms/Sorting_algo/Mergesort
