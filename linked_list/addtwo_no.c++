@@ -12,10 +12,12 @@ It moves slowPtr one step forward by setting slowPtr to slowPtr->next.
 It moves fastPtr two steps forward by setting fastPtr to fastPtr->next->next.
 Once the loop finishes (when fastPtr is nullptr or fastPtr->next is nullptr), slowPtr will be at the middle of the list, which is returned by the function.*/
 #include <iostream>
+
 using namespace std;
-// Define the ListNode structure
-struct ListNode
+
+class ListNode
 {
+public:
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(nullptr) {}
